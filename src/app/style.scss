@@ -1,0 +1,279 @@
+@import "styles/variables";
+
+* {
+  @include base;
+}
+
+header {
+  margin: 50px auto 0 auto;
+  width: 80%;
+  .container {
+    @include flex-row;
+    align-items: center;
+    justify-content: space-between;
+    .glawn {
+      @include flex-row;
+      .title {
+        margin: 6px 0 6px 10px;
+      }
+    }
+    .about-nav {
+      @include flex-row;
+      gap: 40px;
+      color: #4F5665;
+      font-weight: 400;
+    }
+    .login-nav {
+      @include flex-row;
+      align-items: center;
+      gap: 30px;
+      .sign-up {
+        color: #F53855;
+        padding: 13px 45px;
+        border: 1px solid #F53855;
+        border-radius: 50px;
+        box-shadow: 0 2px 5px #d5d5d5;
+      }
+    }
+  }
+}
+
+main {
+  width: 80%;
+  margin: 120px auto 0 auto;
+  .start {
+    @include flex-column;
+    justify-content: space-between;
+    .container {
+      @include flex-row;
+      justify-content: space-between;
+      .info {
+        @include flex-column;
+        width: 555px;
+        color: #0B132A;
+        .title {
+          font-size: 50px;
+          font-weight: 500;
+          .laser {
+            font-weight: 700;
+          }
+        }
+        .sub-text {
+          color: #4F5665;
+          font-weight: 400;
+          margin-top: 20px;
+          .bold {
+            font-weight: 600;
+          }
+        }
+        .button {
+          margin-top: 50px;
+          .get-started {
+            color: #FFFFFF;
+            background-color: #F53838;
+            height: 60px;
+            width: 250px;
+            border: none;
+            border-radius: 10px;
+            font-weight: 500;
+          }
+          .shadow {
+            position: relative;
+            bottom: 60px;
+            left: 20px;
+            width: 211.83px;
+            height: 60px;
+            border-radius: 10px;
+            box-shadow: 0 20px 20px rgba(245, 56, 56, 0.35);
+          }
+        }
+      }
+    }
+    .bottom {
+      @include flex-column;
+      .features {
+        @include flex-row;
+        justify-content: space-between;
+        width: 1140px;
+        margin: 103px auto 0 auto;
+        border-radius: 10px;
+        align-items: center;
+        .users, .locations, .servers {
+          @include flex-row;
+          gap: 36px;
+          img {
+            width: 55px;
+            height: 55px;
+          }
+          .count {
+            font-weight: 700;
+            font-size: 25px;
+            color: rgba(11, 19, 42, 1);
+            padding-bottom: 5px;
+          }
+          .name {
+            font-weight: 400;
+            color: rgba(79, 86, 101, 1);
+            font-size: 20px;
+          }
+        }
+        .left {
+          border-left: 2px solid rgba(238, 239, 242, 1);
+          height: 125px;
+        }
+        .right {
+          border-right: 2px solid rgba(238, 239, 242, 1);
+          height: 125px;
+        }
+      }
+      .shadow-bottom {
+        margin: 0 auto;
+        position: relative;
+        bottom: 150px;
+        opacity: .06;
+        border-radius: 10px;
+        width: 1200px;
+        height: 189px;
+        box-shadow: 0 20px 20px rgba(13, 16, 37, 1);
+      }
+    }
+  }
+  .plan-info {
+    margin: 0 auto;
+    .container {
+      @include flex-row;
+      justify-content: space-between;
+      .info {
+        width: 383px;
+        .title {
+          font-size: 35px;
+          font-weight: 500;
+          color: rgba(11, 19, 42, 1);
+        }
+        .sub-text {
+          margin-top: 20px;
+          color: rgba(79, 86, 101, 1);
+          line-height: 30px;
+          font-weight: 400;
+        }
+        .features {
+          .feature {
+            @include flex-row;
+            font-size: 14px;
+            gap: 10px;
+            margin-top: 20px;
+            color: rgba(79, 86, 101, 1);
+            line-height: 30px;
+            font-weight: 400;
+          }
+        }
+      }
+    }
+  }
+  .pricing {
+    .container {
+      @include flex-column;
+      margin: 210px auto 0 auto;
+      .info {
+        @include flex-column;
+        margin: 0 auto;
+        gap: 20px;
+        .title {
+          margin: 0 auto;
+          text-align: center;
+          width: 383px;
+          font-size: 35px;
+          color: rgba(11, 19, 42, 1);
+          font-weight: 500;
+        }
+        .sub-text {
+          width: 555px;
+          text-align: center;
+          line-height: 30px;
+          color: rgba(79, 86, 101, 1);
+          font-weight: 400;
+        }
+      }
+      .plans {
+        margin-top: 60px;
+        @include flex-row;
+        justify-content: space-between;
+        .plan {
+          @include flex-column;
+          align-items: center;
+          border: 2px solid rgba(221, 221, 221, 1);
+          border-radius: 10px;
+          width: 330px;
+          height: 760px;
+          .plan-img {
+            margin: 80px auto 30px auto;
+          }
+          .title {
+            font-size: 18px;
+            font-weight: 500;
+            color: rgba(11, 19, 42, 1);
+            margin-bottom: 30px;
+          }
+          .ficha {
+            align-items: center;
+            @include flex-column;
+            justify-content: space-between;
+            height: 100%;
+            .features {
+              @include flex-column;
+              gap: 10px;
+              .feature {
+                @include flex-row;
+                gap: 20px;
+                .text {
+                  color: rgba(79, 86, 101, 1);
+                  font-weight: 400;
+                  font-size: 14px;
+                }
+              }
+            }
+            .price {
+              @include flex-column;
+              align-items: center;
+              .izolator {
+                @include flex-row;
+                align-items: center;
+                margin-bottom: 20px;
+                font-size: 25px;
+                gap: 5px;
+                .cost {
+                  color: rgba(11, 19, 42, 1);
+                  font-weight: 500;
+                  font-size: 25px;
+                }
+                .time {
+                  font-weight: 400;
+                  color: rgba(79, 86, 101, 1);
+                }
+              }
+              .button {
+                margin-bottom: 50px;
+                .select {
+                  border: 2px solid rgba(245, 56, 56, 1);
+                  border-radius: 50px;
+                  color: rgba(245, 56, 56, 1);
+                  padding: 13px 60px;
+                  font-weight: 700;
+                  background: transparent;
+                }
+                .selected {
+                  color: rgba(255, 255, 255, 1);
+                  background-color: rgba(245, 56, 56, 1);
+                  border: none;
+                }
+              }
+            }
+          }
+        }
+        .red-border {
+          border: 2px solid rgba(245, 56, 56, 1);
+        }
+      }
+    }
+  }
+}

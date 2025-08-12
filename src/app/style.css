@@ -1,0 +1,305 @@
+@font-face {
+  font-family: "Rubik";
+  src: url("./fonts/Rubik-Medium.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Rubik;
+}
+
+header {
+  margin: 50px auto 0 auto;
+  width: 80%;
+}
+header .container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+header .container .glawn {
+  display: flex;
+  flex-direction: row;
+}
+header .container .glawn .title {
+  margin: 6px 0 6px 10px;
+}
+header .container .about-nav {
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+  color: #4F5665;
+  font-weight: 400;
+}
+header .container .login-nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 30px;
+}
+header .container .login-nav .sign-up {
+  color: #F53855;
+  padding: 13px 45px;
+  border: 1px solid #F53855;
+  border-radius: 50px;
+  box-shadow: 0 2px 5px #d5d5d5;
+}
+
+main {
+  width: 80%;
+  margin: 120px auto 0 auto;
+}
+main .start {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+main .start .container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+main .start .container .info {
+  display: flex;
+  flex-direction: column;
+  width: 555px;
+  color: #0B132A;
+}
+main .start .container .info .title {
+  font-size: 50px;
+  font-weight: 500;
+}
+main .start .container .info .title .laser {
+  font-weight: 700;
+}
+main .start .container .info .sub-text {
+  color: #4F5665;
+  font-weight: 400;
+  margin-top: 20px;
+}
+main .start .container .info .sub-text .bold {
+  font-weight: 600;
+}
+main .start .container .info .button {
+  margin-top: 50px;
+}
+main .start .container .info .button .get-started {
+  color: #FFFFFF;
+  background-color: #F53838;
+  height: 60px;
+  width: 250px;
+  border: none;
+  border-radius: 10px;
+  font-weight: 500;
+}
+main .start .container .info .button .shadow {
+  position: relative;
+  bottom: 60px;
+  left: 20px;
+  width: 211.83px;
+  height: 60px;
+  border-radius: 10px;
+  box-shadow: 0 20px 20px rgba(245, 56, 56, 0.35);
+}
+main .start .bottom {
+  display: flex;
+  flex-direction: column;
+}
+main .start .bottom .features {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 1140px;
+  margin: 103px auto 0 auto;
+  border-radius: 10px;
+  align-items: center;
+}
+main .start .bottom .features .users, main .start .bottom .features .locations, main .start .bottom .features .servers {
+  display: flex;
+  flex-direction: row;
+  gap: 36px;
+}
+main .start .bottom .features .users img, main .start .bottom .features .locations img, main .start .bottom .features .servers img {
+  width: 55px;
+  height: 55px;
+}
+main .start .bottom .features .users .count, main .start .bottom .features .locations .count, main .start .bottom .features .servers .count {
+  font-weight: 700;
+  font-size: 25px;
+  color: rgb(11, 19, 42);
+  padding-bottom: 5px;
+}
+main .start .bottom .features .users .name, main .start .bottom .features .locations .name, main .start .bottom .features .servers .name {
+  font-weight: 400;
+  color: rgb(79, 86, 101);
+  font-size: 20px;
+}
+main .start .bottom .features .left {
+  border-left: 2px solid rgb(238, 239, 242);
+  height: 125px;
+}
+main .start .bottom .features .right {
+  border-right: 2px solid rgb(238, 239, 242);
+  height: 125px;
+}
+main .start .bottom .shadow-bottom {
+  margin: 0 auto;
+  position: relative;
+  bottom: 150px;
+  opacity: 0.06;
+  border-radius: 10px;
+  width: 1200px;
+  height: 189px;
+  box-shadow: 0 20px 20px rgb(13, 16, 37);
+}
+main .plan-info {
+  margin: 0 auto;
+}
+main .plan-info .container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+main .plan-info .container .info {
+  width: 383px;
+}
+main .plan-info .container .info .title {
+  font-size: 35px;
+  font-weight: 500;
+  color: rgb(11, 19, 42);
+}
+main .plan-info .container .info .sub-text {
+  margin-top: 20px;
+  color: rgb(79, 86, 101);
+  line-height: 30px;
+  font-weight: 400;
+}
+main .plan-info .container .info .features .feature {
+  display: flex;
+  flex-direction: row;
+  font-size: 14px;
+  gap: 10px;
+  margin-top: 20px;
+  color: rgb(79, 86, 101);
+  line-height: 30px;
+  font-weight: 400;
+}
+main .pricing .container {
+  display: flex;
+  flex-direction: column;
+  margin: 210px auto 0 auto;
+}
+main .pricing .container .info {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  gap: 20px;
+}
+main .pricing .container .info .title {
+  margin: 0 auto;
+  text-align: center;
+  width: 383px;
+  font-size: 35px;
+  color: rgb(11, 19, 42);
+  font-weight: 500;
+}
+main .pricing .container .info .sub-text {
+  width: 555px;
+  text-align: center;
+  line-height: 30px;
+  color: rgb(79, 86, 101);
+  font-weight: 400;
+}
+main .pricing .container .plans {
+  margin-top: 60px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+main .pricing .container .plans .plan {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 2px solid rgb(221, 221, 221);
+  border-radius: 10px;
+  width: 330px;
+  height: 760px;
+}
+main .pricing .container .plans .plan .plan-img {
+  margin: 80px auto 30px auto;
+}
+main .pricing .container .plans .plan .title {
+  font-size: 18px;
+  font-weight: 500;
+  color: rgb(11, 19, 42);
+  margin-bottom: 30px;
+}
+main .pricing .container .plans .plan .ficha {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+main .pricing .container .plans .plan .ficha .features {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+main .pricing .container .plans .plan .ficha .features .feature {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+main .pricing .container .plans .plan .ficha .features .feature .text {
+  color: rgb(79, 86, 101);
+  font-weight: 400;
+  font-size: 14px;
+}
+main .pricing .container .plans .plan .ficha .price {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+main .pricing .container .plans .plan .ficha .price .izolator {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 20px;
+  font-size: 25px;
+  gap: 5px;
+}
+main .pricing .container .plans .plan .ficha .price .izolator .cost {
+  color: rgb(11, 19, 42);
+  font-weight: 500;
+  font-size: 25px;
+}
+main .pricing .container .plans .plan .ficha .price .izolator .time {
+  font-weight: 400;
+  color: rgb(79, 86, 101);
+}
+main .pricing .container .plans .plan .ficha .price .button {
+  margin-bottom: 50px;
+}
+main .pricing .container .plans .plan .ficha .price .button .select {
+  border: 2px solid rgb(245, 56, 56);
+  border-radius: 50px;
+  color: rgb(245, 56, 56);
+  padding: 13px 60px;
+  font-weight: 700;
+  background: transparent;
+}
+main .pricing .container .plans .plan .ficha .price .button .selected {
+  color: rgb(255, 255, 255);
+  background-color: rgb(245, 56, 56);
+  border: none;
+}
+main .pricing .container .plans .red-border {
+  border: 2px solid rgb(245, 56, 56);
+}
+
+/*# sourceMappingURL=style.css.map */
