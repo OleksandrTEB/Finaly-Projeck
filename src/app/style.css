@@ -32,8 +32,9 @@ header .container .about-nav {
   display: flex;
   flex-direction: row;
   gap: 40px;
-  color: #4F5665;
+  color: rgb(79, 86, 101);
   font-weight: 400;
+  line-height: 30px;
 }
 header .container .login-nav {
   display: flex;
@@ -77,8 +78,9 @@ main .start .container .info .title .laser {
   font-weight: 700;
 }
 main .start .container .info .sub-text {
-  color: #4F5665;
+  color: rgb(79, 86, 101);
   font-weight: 400;
+  line-height: 30px;
   margin-top: 20px;
 }
 main .start .container .info .sub-text .bold {
@@ -128,14 +130,15 @@ main .start .bottom .features .users img, main .start .bottom .features .locatio
   height: 55px;
 }
 main .start .bottom .features .users .count, main .start .bottom .features .locations .count, main .start .bottom .features .servers .count {
+  color: #0B132A;
   font-weight: 700;
   font-size: 25px;
-  color: rgb(11, 19, 42);
   padding-bottom: 5px;
 }
 main .start .bottom .features .users .name, main .start .bottom .features .locations .name, main .start .bottom .features .servers .name {
-  font-weight: 400;
   color: rgb(79, 86, 101);
+  font-weight: 400;
+  line-height: 30px;
   font-size: 20px;
 }
 main .start .bottom .features .left {
@@ -168,15 +171,16 @@ main .plan-info .container .info {
   width: 383px;
 }
 main .plan-info .container .info .title {
-  font-size: 35px;
+  color: #0B132A;
   font-weight: 500;
-  color: rgb(11, 19, 42);
+  font-size: 35px;
 }
 main .plan-info .container .info .sub-text {
-  margin-top: 20px;
   color: rgb(79, 86, 101);
-  line-height: 30px;
   font-weight: 400;
+  line-height: 30px;
+  margin-top: 20px;
+  line-height: 30px;
 }
 main .plan-info .container .info .features .feature {
   display: flex;
@@ -184,9 +188,10 @@ main .plan-info .container .info .features .feature {
   font-size: 14px;
   gap: 10px;
   margin-top: 20px;
-  color: rgb(79, 86, 101);
   line-height: 30px;
+  color: rgb(79, 86, 101);
   font-weight: 400;
+  line-height: 30px;
 }
 main .pricing .container {
   display: flex;
@@ -203,16 +208,17 @@ main .pricing .container .info .title {
   margin: 0 auto;
   text-align: center;
   width: 383px;
-  font-size: 35px;
-  color: rgb(11, 19, 42);
+  color: #0B132A;
   font-weight: 500;
+  font-size: 35px;
 }
 main .pricing .container .info .sub-text {
-  width: 555px;
-  text-align: center;
-  line-height: 30px;
   color: rgb(79, 86, 101);
   font-weight: 400;
+  line-height: 30px;
+  width: 555px;
+  line-height: 30px;
+  text-align: center;
 }
 main .pricing .container .plans {
   margin-top: 60px;
@@ -233,9 +239,9 @@ main .pricing .container .plans .plan .plan-img {
   margin: 80px auto 30px auto;
 }
 main .pricing .container .plans .plan .title {
-  font-size: 18px;
+  color: #0B132A;
   font-weight: 500;
-  color: rgb(11, 19, 42);
+  font-size: 18px;
   margin-bottom: 30px;
 }
 main .pricing .container .plans .plan .ficha {
@@ -258,6 +264,7 @@ main .pricing .container .plans .plan .ficha .features .feature {
 main .pricing .container .plans .plan .ficha .features .feature .text {
   color: rgb(79, 86, 101);
   font-weight: 400;
+  line-height: 30px;
   font-size: 14px;
 }
 main .pricing .container .plans .plan .ficha .price {
@@ -274,13 +281,14 @@ main .pricing .container .plans .plan .ficha .price .izolator {
   gap: 5px;
 }
 main .pricing .container .plans .plan .ficha .price .izolator .cost {
-  color: rgb(11, 19, 42);
+  color: #0B132A;
   font-weight: 500;
   font-size: 25px;
 }
 main .pricing .container .plans .plan .ficha .price .izolator .time {
-  font-weight: 400;
   color: rgb(79, 86, 101);
+  font-weight: 400;
+  line-height: 30px;
 }
 main .pricing .container .plans .plan .ficha .price .button {
   margin-bottom: 50px;
@@ -293,13 +301,350 @@ main .pricing .container .plans .plan .ficha .price .button .select {
   font-weight: 700;
   background: transparent;
 }
+main .pricing .container .plans .plan .ficha .price .button .select:hover {
+  color: rgb(255, 255, 255);
+  background-color: rgb(245, 56, 56);
+}
+main .pricing .container .plans .plan .ficha .price .button .select:active {
+  color: rgb(255, 255, 255);
+  background-color: rgb(197, 43, 43);
+}
 main .pricing .container .plans .plan .ficha .price .button .selected {
   color: rgb(255, 255, 255);
   background-color: rgb(245, 56, 56);
-  border: none;
 }
 main .pricing .container .plans .red-border {
   border: 2px solid rgb(245, 56, 56);
+}
+main .map {
+  margin-top: 150px;
+}
+main .map .text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+main .map .text .title {
+  color: #0B132A;
+  font-weight: 500;
+  font-size: 35px;
+  width: 383px;
+  text-align: center;
+}
+main .map .text .sub-text {
+  color: rgb(79, 86, 101);
+  font-weight: 400;
+  line-height: 30px;
+  width: 555px;
+  text-align: center;
+}
+main .map .text .sub-text .weit {
+  font-weight: 500;
+}
+main .map .map-image {
+  margin-top: 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+main .map .contact {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 1130px;
+  height: 208px;
+  margin: 0 auto;
+}
+main .ocena {
+  width: 1300px;
+  margin: 42px auto 0 auto;
+}
+main .ocena .text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+main .ocena .text .title {
+  color: #0B132A;
+  font-weight: 500;
+  font-size: 35px;
+  width: 447px;
+  text-align: center;
+}
+main .ocena .text .sub-text {
+  color: rgb(79, 86, 101);
+  font-weight: 400;
+  line-height: 30px;
+  width: 555px;
+  text-align: center;
+}
+main .ocena .cards {
+  margin-top: 60px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+main .ocena .cards .card {
+  width: 400px;
+  padding: 30px;
+  border: 2px solid rgb(221, 221, 221);
+  border-radius: 1rem;
+  background-color: #FFF;
+}
+main .ocena .cards .card .rating-shadow {
+  position: absolute;
+  z-index: -1;
+  width: 318px;
+  height: 224px;
+  box-shadow: 0 50px 60px rgb(245, 56, 56);
+  opacity: 0.06;
+}
+main .ocena .cards .card .content .personal-data {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+main .ocena .cards .card .content .personal-data .data {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+}
+main .ocena .cards .card .content .personal-data .data .name .username {
+  font-weight: 500;
+}
+main .ocena .cards .card .content .personal-data .data .name .region {
+  font-weight: 400;
+  font-size: 14px;
+  color: rgb(79, 86, 101);
+}
+main .ocena .cards .card .content .personal-data .rating {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+main .ocena .cards .card .content .text {
+  line-height: 30px;
+  color: rgb(11, 19, 42);
+}
+main .ocena .cards .red-rating-border {
+  border: 2px solid rgb(245, 56, 56);
+}
+main .ocena .slider {
+  margin-top: 82px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-right: 170px;
+}
+main .ocena .slider .points {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+}
+main .ocena .slider .points .point {
+  width: 15px;
+  height: 15px;
+  background-color: rgb(221, 224, 228);
+  border-radius: 50%;
+}
+main .ocena .slider .points .point:hover {
+  background-color: rgb(245, 56, 56);
+  cursor: pointer;
+}
+main .ocena .slider .points .check-point {
+  width: 45px;
+  height: 15px;
+  background-color: rgb(245, 56, 56);
+  border-radius: 50px;
+}
+main .ocena .slider .slide-btn {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+main .ocena .slider .slide-btn .prev, main .ocena .slider .slide-btn .next {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 2px solid rgb(245, 56, 56);
+}
+main .ocena .slider .slide-btn .prev {
+  background-image: url("../../Public/prev-red.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+main .ocena .slider .slide-btn .prev:hover {
+  background-color: rgb(245, 56, 56);
+  background-image: url("../../Public/prev-white.svg");
+}
+main .ocena .slider .slide-btn .prev:active {
+  background-color: rgb(209, 50, 50);
+}
+main .ocena .slider .slide-btn .next {
+  background-image: url("../../Public/next-red.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+main .ocena .slider .slide-btn .next:hover {
+  background-color: rgb(245, 56, 56);
+  background-image: url("../../Public/next-white.svg");
+}
+main .ocena .slider .slide-btn .next:active {
+  background-color: rgb(209, 50, 50);
+}
+main .subscribe {
+  position: relative;
+  top: 100px;
+  background-color: rgb(255, 255, 255);
+  margin: 72px auto 0 auto;
+  width: 1140px;
+  z-index: 1000;
+  border-radius: 10px;
+}
+main .subscribe .sub-shadow {
+  width: 1140px;
+  height: 233px;
+  border-radius: 10px;
+  position: absolute;
+  box-shadow: 0 100px 100px rgb(13, 16, 37);
+  opacity: 0.09;
+  background: transparent;
+}
+main .subscribe .sub-content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 70px;
+  height: 233px;
+}
+main .subscribe .sub-content .text {
+  display: flex;
+  flex-direction: column;
+  width: 410px;
+  gap: 20px;
+}
+main .subscribe .sub-content .text .title {
+  color: #0B132A;
+  font-weight: 500;
+  font-size: 35px;
+}
+main .subscribe .sub-content .text .sub-text {
+  color: rgb(79, 86, 101);
+  font-weight: 400;
+  line-height: 30px;
+}
+main .subscribe .sub-content .button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+main .subscribe .sub-content .button .subscribe-btn {
+  width: 250px;
+  height: 60px;
+  color: rgb(255, 255, 255);
+  background-color: rgb(245, 56, 56);
+  font-weight: 600;
+  border: none;
+  border-radius: 10px;
+}
+main .subscribe .sub-content .button .sub-btn-shadow {
+  position: absolute;
+  width: 211px;
+  height: 60px;
+  box-shadow: 0 20px 54px rgba(245, 56, 56, 0.35);
+}
+
+footer {
+  height: 563px;
+  background-color: rgb(248, 248, 248);
+  z-index: -1000;
+  margin-bottom: 360px;
+  padding: 150px 180px;
+}
+footer .footer-content {
+  display: flex;
+  flex-direction: row;
+  width: 1140px;
+  margin: 69px auto 0 auto;
+  justify-content: space-between;
+}
+footer .footer-content .global-info {
+  display: flex;
+  flex-direction: column;
+}
+footer .footer-content .global-info .title {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+}
+footer .footer-content .global-info .title .logo-text {
+  font-size: 24px;
+}
+footer .footer-content .global-info .title .logo-text .vpn {
+  font-weight: 700;
+}
+footer .footer-content .global-info .sub-text {
+  color: rgb(79, 86, 101);
+  font-weight: 400;
+  line-height: 30px;
+  width: 340px;
+  margin-top: 20px;
+}
+footer .footer-content .global-info .items {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  margin-top: 30px;
+}
+footer .footer-content .global-info .items .item {
+  width: 36px;
+  height: 36px;
+  background-color: rgb(245, 56, 56);
+  border-radius: 50%;
+}
+footer .footer-content .global-info .description {
+  margin-top: 30px;
+  color: rgb(79, 86, 101);
+  font-weight: 400;
+  line-height: 30px;
+  opacity: 0.5;
+}
+footer .footer-content .global-info .description .desc-vpn {
+  font-weight: 600;
+}
+footer .footer-content .social {
+  display: flex;
+  flex-direction: row;
+  gap: 126px;
+}
+footer .footer-content .social .merge {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+footer .footer-content .social .merge .title {
+  color: rgb(11, 19, 42);
+  font-size: 18px;
+  font-weight: 500;
+}
+footer .footer-content .social .merge .context {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+footer .footer-content .social .merge .context .sub-text {
+  color: rgb(79, 86, 101);
+  font-weight: 400;
+  line-height: 30px;
 }
 
 /*# sourceMappingURL=style.css.map */

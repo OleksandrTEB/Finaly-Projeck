@@ -20,8 +20,7 @@ header {
     .about-nav {
       @include flex-row;
       gap: 40px;
-      color: #4F5665;
-      font-weight: 400;
+      @include base-sub-text;
     }
     .login-nav {
       @include flex-row;
@@ -59,8 +58,7 @@ main {
           }
         }
         .sub-text {
-          color: #4F5665;
-          font-weight: 400;
+          @include base-sub-text;
           margin-top: 20px;
           .bold {
             font-weight: 600;
@@ -106,14 +104,11 @@ main {
             height: 55px;
           }
           .count {
-            font-weight: 700;
-            font-size: 25px;
-            color: rgba(11, 19, 42, 1);
+            @include base-title(25px, 700);
             padding-bottom: 5px;
           }
           .name {
-            font-weight: 400;
-            color: rgba(79, 86, 101, 1);
+            @include base-sub-text;
             font-size: 20px;
           }
         }
@@ -146,15 +141,12 @@ main {
       .info {
         width: 383px;
         .title {
-          font-size: 35px;
-          font-weight: 500;
-          color: rgba(11, 19, 42, 1);
+          @include base-title(35px);
         }
         .sub-text {
+          @include base-sub-text;
           margin-top: 20px;
-          color: rgba(79, 86, 101, 1);
           line-height: 30px;
-          font-weight: 400;
         }
         .features {
           .feature {
@@ -162,9 +154,8 @@ main {
             font-size: 14px;
             gap: 10px;
             margin-top: 20px;
-            color: rgba(79, 86, 101, 1);
             line-height: 30px;
-            font-weight: 400;
+            @include base-sub-text;
           }
         }
       }
@@ -182,16 +173,13 @@ main {
           margin: 0 auto;
           text-align: center;
           width: 383px;
-          font-size: 35px;
-          color: rgba(11, 19, 42, 1);
-          font-weight: 500;
+          @include base-title(35px);
         }
         .sub-text {
+          @include base-sub-text;
           width: 555px;
-          text-align: center;
           line-height: 30px;
-          color: rgba(79, 86, 101, 1);
-          font-weight: 400;
+          text-align: center;
         }
       }
       .plans {
@@ -209,9 +197,7 @@ main {
             margin: 80px auto 30px auto;
           }
           .title {
-            font-size: 18px;
-            font-weight: 500;
-            color: rgba(11, 19, 42, 1);
+            @include base-title(18px);
             margin-bottom: 30px;
           }
           .ficha {
@@ -226,8 +212,7 @@ main {
                 @include flex-row;
                 gap: 20px;
                 .text {
-                  color: rgba(79, 86, 101, 1);
-                  font-weight: 400;
+                  @include base-sub-text;
                   font-size: 14px;
                 }
               }
@@ -242,13 +227,10 @@ main {
                 font-size: 25px;
                 gap: 5px;
                 .cost {
-                  color: rgba(11, 19, 42, 1);
-                  font-weight: 500;
-                  font-size: 25px;
+                  @include base-title;
                 }
                 .time {
-                  font-weight: 400;
-                  color: rgba(79, 86, 101, 1);
+                  @include base-sub-text;
                 }
               }
               .button {
@@ -260,11 +242,18 @@ main {
                   padding: 13px 60px;
                   font-weight: 700;
                   background: transparent;
+                  &:hover {
+                    color: rgba(255, 255, 255, 1);
+                    background-color: rgba(245, 56, 56, 1);
+                  }
+                  &:active {
+                    color: rgba(255, 255, 255, 1);
+                    background-color: rgb(197, 43, 43);
+                  }
                 }
                 .selected {
                   color: rgba(255, 255, 255, 1);
                   background-color: rgba(245, 56, 56, 1);
-                  border: none;
                 }
               }
             }
@@ -272,6 +261,301 @@ main {
         }
         .red-border {
           border: 2px solid rgba(245, 56, 56, 1);
+        }
+      }
+    }
+  }
+  .map {
+    margin-top: 150px;
+    .text {
+      @include flex-column;
+      align-items: center;
+      gap: 20px;
+      .title {
+        @include base-title(35px);
+        width: 383px;
+        text-align: center;
+      }
+      .sub-text {
+        @include base-sub-text;
+        width: 555px;
+        text-align: center;
+        .weit {
+          font-weight: 500;
+        }
+      }
+    }
+    .map-image {
+      margin-top: 150px;
+      @include flex-column;
+      align-items: center;
+    }
+    .contact {
+      @include flex-row;
+      align-items: center;
+      justify-content: space-between;
+      width: 1130px;
+      height: 208px;
+      margin: 0 auto;
+    }
+  }
+  .ocena {
+    width: 1300px;
+    margin: 42px auto 0 auto;
+    .text {
+      @include flex-column;
+      align-items: center;
+      gap: 20px;
+      .title {
+        @include base-title(35px);
+        width: 447px;
+        text-align: center;
+      }
+      .sub-text {
+        @include base-sub-text;
+        width: 555px;
+        text-align: center;
+      }
+    }
+    .cards {
+      margin-top: 60px;
+      @include flex-row;
+      justify-content: space-between;
+      .card {
+        width: 400px;
+        padding: 30px;
+        border: 2px solid rgba(221, 221, 221, 1);
+        border-radius: 1rem;
+        background-color: #FFF;
+        .rating-shadow {
+          position: absolute;
+          z-index: -1;
+          width: 318px;
+          height: 224px;
+          box-shadow: 0 50px 60px rgba(245, 56, 56, 1);
+          opacity: .06;
+        }
+        .content {
+          .personal-data {
+            @include flex-row;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            .data {
+              @include flex-row;
+              align-items: center;
+              gap: 20px;
+              .name {
+                .username {
+                  font-weight: 500;
+                }
+                .region {
+                  font-weight: 400;
+                  font-size: 14px;
+                  color: rgba(79, 86, 101, 1);
+                }
+              }
+            }
+            .rating {
+              @include flex-row;
+              gap: 10px;
+            }
+          }
+          .text {
+            line-height: 30px;
+            color: rgba(11, 19, 42, 1);
+          }
+        }
+      }
+      .red-rating-border {
+        border: 2px solid rgba(245, 56, 56, 1);
+      }
+    }
+    .slider {
+      margin-top: 82px;
+      @include flex-row;
+      align-items: center;
+      justify-content: space-between;
+      margin-right: 170px;
+      .points {
+        @include flex-row;
+        gap: 15px;
+        .point {
+          width: 15px;
+          height: 15px;
+          background-color: rgba(221, 224, 228, 1);
+          border-radius: 50%;
+          &:hover {
+            background-color: rgba(245, 56, 56, 1);
+            cursor: pointer;
+          }
+        }
+        .check-point {
+          width: 45px;
+          height: 15px;
+          background-color: rgba(245, 56, 56, 1);
+          border-radius: 50px;
+        }
+      }
+      .slide-btn {
+        @include flex-row;
+        gap: 20px;
+        .prev, .next {
+          width: 60px;
+          height: 60px;
+          border-radius: 50%;
+          border: 2px solid rgba(245, 56, 56, 1);
+        }
+        .prev {
+          background-image: url("../../Public/prev-red.svg");
+          background-repeat: no-repeat;
+          background-position: center;
+          &:hover {
+            background-color: rgba(245, 56, 56, 1);
+            background-image: url("../../Public/prev-white.svg");
+          }
+          &:active {
+            background-color: rgb(209, 50, 50);
+          }
+        }
+        .next {
+          background-image: url("../../Public/next-red.svg");
+          background-repeat: no-repeat;
+          background-position: center;
+          &:hover {
+            background-color: rgba(245, 56, 56, 1);
+            background-image: url("../../Public/next-white.svg");
+          }
+          &:active {
+            background-color: rgb(209, 50, 50);
+          }
+        }
+      }
+    }
+  }
+  .subscribe {
+    position: relative;
+    top: 100px;
+    background-color: rgba(255, 255, 255, 1);
+    margin: 72px auto 0 auto;
+    width: 1140px;
+    z-index: 1000;
+    border-radius: 10px;
+    .sub-shadow {
+      width: 1140px;
+      height: 233px;
+      border-radius: 10px;
+      position: absolute;
+      box-shadow: 0 100px 100px rgba(13, 16, 37, 1);
+      opacity: .09;
+      background: transparent;
+    }
+    .sub-content {
+      @include flex-row;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 70px;
+      height: 233px;
+      .text {
+        @include flex-column;
+        width: 410px;
+        gap: 20px;
+        .title {
+          @include base-title(35px);
+        }
+        .sub-text {
+          @include base-sub-text;
+        }
+      }
+      .button {
+        @include flex-column;
+        align-items: center;
+        .subscribe-btn {
+          width: 250px;
+          height: 60px;
+          color: rgba(255, 255, 255, 1);
+          background-color: rgba(245, 56, 56, 1);
+          font-weight: 600;
+          border: none;
+          border-radius: 10px;
+        }
+        .sub-btn-shadow {
+          position: absolute;
+          width: 211px;
+          height: 60px;
+          box-shadow: 0 20px 54px rgba(245, 56, 56, 0.35);
+        }
+      }
+    }
+  }
+}
+
+footer {
+  height: 563px;
+  background-color: rgba(248, 248, 248, 1);
+  z-index: -1000;
+  margin-bottom: 360px;
+  padding: 150px 180px;
+  .footer-content {
+    @include flex-row;
+    width: 1140px;
+    margin: 69px auto 0 auto;
+    justify-content: space-between;
+    .global-info {
+      @include flex-column;
+      .title {
+        @include flex-row;
+        align-items: center;
+        gap: 10px;
+        .logo-text {
+          font-size: 24px;
+          .vpn {
+            font-weight: 700;
+          }
+        }
+      }
+      .sub-text {
+        @include base-sub-text;
+        width: 340px;
+        margin-top: 20px;
+      }
+      .items {
+        @include flex-row;
+        gap: 20px;
+        margin-top: 30px;
+        .item {
+          width: 36px;
+          height: 36px;
+          background-color: rgba(245, 56, 56, 1);
+          border-radius: 50%;
+        }
+      }
+      .description {
+        margin-top: 30px;
+        @include base-sub-text;
+        opacity: .5;
+        .desc-vpn {
+          font-weight: 600;
+        }
+      }
+    }
+    .social {
+      @include flex-row;
+      gap: 126px;
+      .merge {
+        @include flex-column;
+        gap: 20px;
+        .title {
+          color: rgba(11, 19, 42, 1);
+          font-size: 18px;
+          font-weight: 500;
+        }
+        .context {
+          @include flex-column;
+          gap: 10px;
+          .sub-text {
+            @include base-sub-text;
+          }
         }
       }
     }
