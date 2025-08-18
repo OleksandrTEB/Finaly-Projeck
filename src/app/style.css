@@ -393,6 +393,15 @@ main .ocena .cards .card {
   border: 2px solid rgb(221, 221, 221);
   border-radius: 1rem;
   background-color: #FFF;
+  animation: wisible 0.4s ease-out forwards;
+}
+@keyframes wisible {
+  0% {
+    transform: translateX(100px);
+  }
+  100% {
+    transform: translateX(-50px);
+  }
 }
 main .ocena .cards .card .rating-shadow {
   position: absolute;
@@ -432,6 +441,9 @@ main .ocena .cards .card .content .text {
   line-height: 30px;
   color: rgb(11, 19, 42);
 }
+main .ocena .cards .hid-card {
+  display: none;
+}
 main .ocena .cards .red-rating-border {
   border: 2px solid rgb(245, 56, 56);
 }
@@ -463,6 +475,7 @@ main .ocena .slider .points .check-point {
   height: 15px;
   background-color: rgb(245, 56, 56);
   border-radius: 50px;
+  transition: width 0.3s;
 }
 main .ocena .slider .slide-btn {
   display: flex;
