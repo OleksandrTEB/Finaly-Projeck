@@ -7,11 +7,17 @@
 header {
   margin: 50px auto 0 auto;
   width: 80%;
+  @include adaptive(xxl){
+    width: 95%;
+  }
 
   .container {
     @include flex-row;
     align-items: center;
     justify-content: space-between;
+    @include adaptive(md){
+      justify-content: space-around;
+    }
 
     .glawn {
       @include flex-row;
@@ -27,10 +33,47 @@ header {
       @include base-sub-text;
     }
 
+    .about-nav-md {
+      display: none;
+      top: 6rem;
+      position: absolute;
+      right: 30px;
+      flex-direction: column;
+      gap: 10px;
+      animation: fadeIn .4s ease-in-out forwards;
+      background-color: #e3e3e3;
+      padding: 1rem;
+      border-radius: 10px;
+
+      @keyframes fadeIn {
+        0%{
+          transform: translateY(-50px);
+          opacity: 0;
+        }
+        100%{
+          transform: translateY(0px);
+          opacity: 1;
+        }
+      }
+    }
+
+    .hamburger {
+      display: none;
+      order: 3;
+      img {
+        width: 2rem;
+        height: 2rem;
+      }
+    }
+
     .login-nav {
       @include flex-row;
       align-items: center;
       gap: 30px;
+      @include adaptive(xs){
+        position: absolute;
+        top: 5.5rem;
+      }
 
       .sign-up {
         color: #F53855;
@@ -46,6 +89,9 @@ header {
 main {
   width: 80%;
   margin: 120px auto 0 auto;
+  @include adaptive(xxl){
+    width: 95%;
+  }
 
   .start {
     @include flex-column;
@@ -54,11 +100,19 @@ main {
     .container {
       @include flex-row;
       justify-content: space-between;
+      @include adaptive(md){
+        flex-direction: column;
+        align-items: center;
+        row-gap: 20px;
+      }
 
       .info {
         @include flex-column;
         width: 555px;
         color: #0B132A;
+        @include adaptive(sm){
+          width: 95%;
+        }
 
         .title {
           font-size: 50px;
@@ -102,6 +156,11 @@ main {
           }
         }
       }
+      .foto {
+        img {
+          width: 100%;
+        }
+      }
     }
 
     .bottom {
@@ -113,7 +172,14 @@ main {
         width: 1140px;
         margin: 103px auto 0 auto;
         border-radius: 10px;
-        align-items: center;
+        @include adaptive(lg){
+          width: 90%;
+        }
+        @include moreAdaptive(670px) {
+          @include flex-column;
+          row-gap: 20px;
+          align-items: center;
+        }
 
         .users, .locations, .servers {
           @include flex-row;
@@ -138,11 +204,17 @@ main {
         .left {
           border-left: 2px solid rgba(238, 239, 242, 1);
           height: 125px;
+          @include moreAdaptive(670px) {
+            display: none;
+          }
         }
 
         .right {
           border-right: 2px solid rgba(238, 239, 242, 1);
           height: 125px;
+          @include moreAdaptive(670px) {
+            display: none;
+          }
         }
       }
 
@@ -155,6 +227,12 @@ main {
         width: 1200px;
         height: 189px;
         box-shadow: 0 20px 20px rgba(13, 16, 37, 1);
+        @include adaptive(lg){
+          width: 95%;
+        }
+        @include moreAdaptive(670px) {
+          display: none;
+        }
       }
     }
   }
@@ -165,7 +243,17 @@ main {
     .container {
       @include flex-row;
       justify-content: space-between;
+      @include adaptive(md){
+        flex-direction: column;
+        align-items: center;
+        row-gap: 40px;
+      }
 
+      .photo {
+        img {
+          width: 100%;
+        }
+      }
       .info {
         width: 383px;
 
@@ -189,6 +277,10 @@ main {
             @include base-sub-text;
           }
         }
+
+        @include adaptive(xs){
+          width: 95%;
+        }
       }
     }
   }
@@ -197,6 +289,9 @@ main {
     .container {
       @include flex-column;
       margin: 210px auto 0 auto;
+      @include adaptive(sm) {
+        margin: 100px auto 0 auto;
+      }
 
       .info {
         @include flex-column;
@@ -208,6 +303,9 @@ main {
           text-align: center;
           width: 383px;
           @include base-title(35px);
+          @include adaptive(xs){
+            width: 95%;
+          }
         }
 
         .sub-text {
@@ -215,6 +313,10 @@ main {
           width: 555px;
           line-height: 30px;
           text-align: center;
+
+          @include moreAdaptive(600px){
+            width: 95%;
+          }
         }
       }
 
@@ -222,6 +324,11 @@ main {
         margin-top: 60px;
         @include flex-row;
         justify-content: space-between;
+        gap: 1rem;
+        @include adaptive(sm) {
+          @include flex-column;
+          align-items: center;
+        }
 
         .plan {
           @include flex-column;
@@ -230,9 +337,15 @@ main {
           border-radius: 10px;
           width: 330px;
           height: 760px;
+          @include adaptive(sm) {
+            height: auto;
+          }
 
           .plan-img {
             margin: 80px auto 30px auto;
+            @include adaptive(sm) {
+              margin: 30px auto;
+            }
           }
 
           .title {
@@ -331,6 +444,10 @@ main {
         @include base-title(35px);
         width: 383px;
         text-align: center;
+
+        @include moreAdaptive(600px){
+          width: 95%;
+        }
       }
 
       .sub-text {
@@ -341,28 +458,55 @@ main {
         .weit {
           font-weight: 500;
         }
+        @include moreAdaptive(600px){
+          width: 95%;
+        }
       }
     }
 
     .map-image {
-      margin-top: 150px;
+      margin: 150px auto 0 auto;
       @include flex-column;
       align-items: center;
+      img {
+        width: 1060px;
+        @include adaptive(lg) {
+          width: 100%;
+        }
+      }
     }
 
     .contact {
-      @include flex-row;
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
       align-items: center;
       justify-content: space-between;
       width: 1130px;
       height: 208px;
       margin: 0 auto;
+      @include adaptive(lg) {
+        width: 95%;
+        height: auto;
+      }
+      @include moreAdaptive(1180px) {
+        grid-template-columns: repeat(3, 1fr);
+        text-align: center;
+      }
+      @include adaptive(sm) {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      @include adaptive(xs) {
+        grid-template-columns: repeat(1, 1fr);
+      }
     }
   }
 
   .ocena {
     width: 1300px;
     margin: 42px auto 0 auto;
+    @include adaptive(xxl) {
+      width: 95%;
+    }
 
     .text {
       @include flex-column;
@@ -373,12 +517,18 @@ main {
         @include base-title(35px);
         width: 447px;
         text-align: center;
+        @include moreAdaptive(600px){
+          width: 95%;
+        }
       }
 
       .sub-text {
         @include base-sub-text;
         width: 555px;
         text-align: center;
+        @include moreAdaptive(600px){
+          width: 95%;
+        }
       }
     }
 
@@ -386,6 +536,7 @@ main {
       margin-top: 60px;
       @include flex-row;
       justify-content: space-between;
+      gap: 1rem;
 
       .card {
         width: 400px;
@@ -398,9 +549,11 @@ main {
         @keyframes wisible {
           0%{
             transform: translateX(100px);
+            opacity: 0;
           }
           100%{
-            transform: translateX(-50px);
+            transform: translateX(0px);
+            opacity: 1;
           }
         }
 
@@ -411,6 +564,9 @@ main {
           height: 224px;
           box-shadow: 0 50px 60px rgba(245, 56, 56, 1);
           opacity: .06;
+          @include moreAdaptive(1100px){
+            display: none;
+          }
         }
 
         .content {
@@ -544,15 +700,28 @@ main {
     width: 1140px;
     z-index: 1000;
     border-radius: 10px;
+    @include adaptive(lg) {
+      width: 95%;
+    }
+    @include moreAdaptive(530px) {
+      height: auto;
+    }
 
     .sub-shadow {
+      margin: auto;
       width: 1140px;
       height: 233px;
+      @include moreAdaptive(530px) {
+        height: auto;
+      }
       border-radius: 10px;
       position: absolute;
       box-shadow: 0 100px 100px rgba(13, 16, 37, 1);
       opacity: .09;
       background: transparent;
+      @include adaptive(lg) {
+        width: 100%;
+      }
     }
 
     .sub-content {
@@ -560,12 +729,22 @@ main {
       align-items: center;
       justify-content: space-between;
       padding: 0 70px;
+      @include moreAdaptive(530px) {
+        padding: 0;
+      }
       height: 233px;
+      @include moreAdaptive(860px) {
+        @include flex-column;
+        gap: 40px;
+      }
 
       .text {
         @include flex-column;
         width: 410px;
         gap: 20px;
+        @include moreAdaptive(530px) {
+          width: 95%;
+        }
 
         .title {
           @include base-title(35px);
@@ -588,6 +767,9 @@ main {
           font-weight: 600;
           border: none;
           border-radius: 10px;
+          @include moreAdaptive(860px) {
+            margin-bottom: 2rem;
+          }
         }
 
         .sub-btn-shadow {
@@ -603,19 +785,37 @@ main {
 
 footer {
   height: 563px;
+  @include adaptive(sm) {
+    height: auto;
+  }
   background-color: rgba(248, 248, 248, 1);
   z-index: -1000;
   margin-bottom: 360px;
   padding: 150px 180px;
+  @include moreAdaptive(1300px) {
+    padding: 100px 80px;
+  }
+
 
   .footer-content {
     @include flex-row;
+    align-items: center;
     width: 1140px;
     margin: 69px auto 0 auto;
     justify-content: space-between;
+    @include adaptive(xxl) {
+      width: 100%;
+    }
+    @include adaptive(sm) {
+      @include flex-column;
+      gap: 100px;
+    }
 
     .global-info {
       @include flex-column;
+      @include adaptive(sm) {
+        order: 2;
+      }
 
       .title {
         @include flex-row;
@@ -664,6 +864,9 @@ footer {
     .social {
       @include flex-row;
       gap: 126px;
+      @include adaptive(md) {
+        gap: 40px;
+      }
 
       .merge {
         @include flex-column;

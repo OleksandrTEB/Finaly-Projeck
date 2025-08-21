@@ -143,3 +143,34 @@ function init() {
     resetCards()
 }
 init();
+
+//Adaptive
+
+const about = document.querySelector(".about-nav")
+const hamburger = document.querySelector(".hamburger")
+hamburger.addEventListener("click", () => {
+    if (about.style.display === "flex") {
+        about.style.display = "none";
+    } else {
+        about.style.display = "flex";
+    }
+})
+let widthDevice = window.innerWidth
+document.addEventListener("DOMContentLoaded", () => {
+    resize()
+})
+
+function resize() {
+    window.onresize = () => {
+        widthDevice = window.innerWidth
+        if (widthDevice < 1024) {
+            about.classList.add("about-nav-md")
+            hamburger.style.display = "block"
+            about.style.display = "none";
+        } else {
+            about.classList.remove("about-nav-md")
+            hamburger.style.display = "none"
+            about.style.display = "flex";
+        }
+    }
+}
