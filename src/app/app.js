@@ -4,9 +4,11 @@ let arr_btn = Array.from(buttons)
 
 
 const plans = document.querySelectorAll(".plan")
+const priceShadow = document.querySelectorAll(".price-shadow")
 
 
 let arr_price = Array.from(plans)
+let arr_shadow = Array.from(priceShadow)
 
 let count_btn = arr_btn.length
 
@@ -16,6 +18,9 @@ function reset() {
     })
     plans.forEach((item) => {
         item.classList.remove("red-border")
+    })
+    priceShadow.forEach((item) => {
+        item.classList.remove("is-shadow")
     })
 }
 
@@ -27,6 +32,8 @@ for(let i = 0; i < count_btn; i++) {
 
 
         arr_price[i].classList.add("red-border")
+
+        arr_shadow[i].classList.add("is-shadow")
 
         localStorage.setItem("index", i)
     })
@@ -86,7 +93,6 @@ function next(){
     arr_cards[current_card].classList.add("red-rating-border")
     arr_points[current_card].classList.add("check-point")
     arr_cardsShadow[current_card].classList.add("rating-shadow")
-
 }
 
 function prev(){
@@ -141,6 +147,7 @@ divPoints.addEventListener("click", clickPoint)
 
 function init() {
     resetCards()
+    next();
 }
 init();
 
